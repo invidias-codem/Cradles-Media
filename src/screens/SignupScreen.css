@@ -1,0 +1,138 @@
+.signupScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  }
+  
+  .signupScreen form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .signupScreen h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .signupScreen input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .signupScreen input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .signupScreen input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .signupScreen button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px 0 rgba(255, 107, 107, 0.75);
+  }
+  
+  .signupScreen button:hover {
+    background: linear-gradient(45deg, #feca57, #ff6b6b);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px 0 rgba(255, 107, 107, 0.75);
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+    }
+  }
+  
+  .signupScreen button:focus {
+    animation: pulse 1.5s infinite;
+  }
+  
+  @media (max-width: 480px) {
+    .signupScreen form {
+      padding: 30px;
+    }
+  
+    .signupScreen h1 {
+      font-size: 2rem;
+    }
+  
+    .signupScreen input,
+    .signupScreen button {
+      padding: 12px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .signupScreen form {
+      padding: 30px;
+    }
+  
+    .signupScreen h1 {
+      font-size: 2rem;
+    }
+  
+    .signupScreen input,
+    .signupScreen button {
+      padding: 12px;
+    }
+  }
+
+  .signupScreen__gray {
+    margin: 18px 0 0 0;
+    padding: 18px ;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px 0 rgba(255, 107, 107, 0.75);
+    text-align: center;
+  }
+
+  .signupScreen__link:hover {
+    cursor: pointer;
+    text-decoration: underline; 
+  }

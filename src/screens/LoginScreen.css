@@ -1,0 +1,199 @@
+:root {
+  --primary-color: #e50914;
+  --secondary-color: #fff;
+  --background-color: #1e3c72;
+  --gradient-start: rgba(30, 60, 114, 0.8);
+  --gradient-end: rgba(42, 82, 152, 0.8);
+  --input-background: rgba(255, 255, 255, 0.2);
+  --button-gradient: linear-gradient(45deg, #ff6b6b, #feca57);
+  --button-hover-gradient: linear-gradient(45deg, #feca57, #ff6b6b);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loginScreen {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: url("https://static.vecteezy.com/system/resources/thumbnails/023/025/787/small_2x/cyberpunk-retro-computer-pixel-art-animation-on-green-screen-video.jpg") center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginScreen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+}
+
+.loginScreen_logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 150px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.loginScreen_btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  background: var(--button-gradient);
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  z-index: 2;
+  box-shadow: 0 4px 15px 0 rgba(255, 107, 107, 0.75);
+}
+
+.loginScreen_btn:hover {
+  background: var(--button-hover-gradient);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px 0 rgba(255, 107, 107, 0.75);
+}
+
+.loginScreen_body {
+  position: relative;
+  z-index: 1;
+  color: var(--secondary-color);
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.loginScreen_body > h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.loginScreen_body > h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.loginScreen_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginScreen_input > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.loginScreen_input > form > input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 50px;
+  background: var(--input-background);
+  color: var(--secondary-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.loginScreen_input > form > input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.loginScreen_input > form > input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.loginScreen_start {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  background: var(--button-gradient);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 15px 0 rgba(255, 107, 107, 0.75);
+}
+
+.loginScreen_start:hover {
+  background: var(--button-hover-gradient);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px 0 rgba(255, 107, 107, 0.75);
+}
+
+@media (max-width: 768px) {
+  .loginScreen_body {
+    padding: 30px;
+  }
+
+  .loginScreen_body > h1 {
+    font-size: 2rem;
+  }
+
+  .loginScreen_body > h2 {
+    font-size: 1.2rem;
+  }
+
+  .loginScreen_input > form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginScreen_logo {
+    width: 100px;
+  }
+
+  .loginScreen_btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .loginScreen_body > h1 {
+    font-size: 1.5rem;
+  }
+
+  .loginScreen_body > h2 {
+    font-size: 1rem;
+  }
+
+  .loginScreen_input > form > input,
+  .loginScreen_start {
+    padding: 12px;
+  }
+}
